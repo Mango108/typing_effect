@@ -1,3 +1,53 @@
 @charset 'UTF-8';
 @import 'reset.scss';
 
+body{
+    background:black;
+}
+.wrap{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+
+    i{
+        font-size: 10rem;
+        color:transparent;
+        background:linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        -webkit-background-clip: text;
+    }
+    .lgTxt{
+        color:transparent;
+        background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+        -webkit-background-clip: text;
+
+        position:relative;
+        display:inline-block;
+        margin: 20px 0;
+        font: bold 2vw/1 "arial";
+        letter-spacing: 1px;
+        
+
+        &::after{
+            content:"";
+            position:absolute;
+            display:block;
+            top:0;
+            right:-10px;
+            width:3px;
+            height:100%;
+            background:#E0C3FC;
+        }
+        &.active::after{
+            display:none;
+        }
+    }
+    .smallTxt{
+        color:transparent;
+        background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+        -webkit-background-clip: text;
+        font:1vw/1 "arial";
+    }
+
+}
